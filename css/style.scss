@@ -1,0 +1,308 @@
+$color-rosa: #ff00b7;
+$color-verde: #BDDB4F;
+$color-blanco: #F8F9F7;
+$color-negro: #050402;
+
+
+* {
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: AbrilFatface-regular;
+    src: url(../AbrilFatface-Regular.ttf);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: AbrilFatface-regular;
+}
+body{
+    background-image: url(../img/bg-body.jpg);
+}
+
+i {
+    color: $color-rosa;
+    font-size: 2.125rem;
+}
+
+.card {
+    border: none !important;
+}
+
+.card-footer {
+    background: none !important;
+    border: none !important;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-gradient {
+    background: linear-gradient(30deg, #ff00b7, #ffa9f5) !important;
+    border-radius: 45px;
+    border: 2px solid #F8F9F7;
+    box-shadow: 0px 8px 18px #ff00cc64;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+main {
+
+    header {
+        .menu-bar-pc {
+            // background: $color-blanco;
+            width: 100%;
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            padding: 0 2.25rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 5.875rem;
+            // border-bottom: 1px solid #d1d1d1;
+
+            // .logo {
+            //     width: 100px!important;
+            // }
+
+            .menu-principal {
+                a {
+                    padding: 0 0.5625rem;
+                    text-decoration: none;
+
+                }
+            }
+
+            .top-redes {
+                a {
+                    padding: 0 0.5625rem;
+                    text-decoration: none;
+
+                    i {
+                        color: $color-negro;
+                        font-size: 1.65rem;
+                    }
+                }
+            }
+
+
+        }
+
+        .menu-bar-movil {
+            background: $color-blanco;
+            width: 100%;
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            padding: 0 2.25rem;
+            display: none;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 5.875rem;
+            border-bottom: 1px solid $color-blanco;
+        }
+
+        // .logo {
+        //     max-width: 3.125rem;
+        // }
+
+        .burger-menu {
+            cursor: pointer;
+            font-size: 2.1875rem;
+
+        }
+
+        .slideMenu {
+            position: fixed;
+            top: 5.875rem;
+            left: -80%;
+            background: $color-blanco;
+            text-align: center;
+            padding: 1.25rem 2.25rem;
+            width: 80%;
+            -webkit-transition: all .3s ease;
+            -o-transition: all .3s ease;
+            transition: all .3s ease;
+
+            &.active {
+                left: 0;
+            }
+
+            .top-redes {
+                margin-bottom: 0.625rem;
+
+                a {
+                    padding: 0 0.5625rem;
+                }
+            }
+
+            .menu-principal {
+                a {
+                    display: block;
+                    padding: 0.625rem 0;
+                    border-top: 1px solid #d1d1d1;
+                }
+            }
+        }
+
+
+    }
+
+
+    // max-width: 1400px;
+    width: 100%;
+
+    .portada {
+        width: 100%;
+        height: 100vh;
+        // background-image: url();
+
+
+        .text-banner {
+            left: 50%;
+            top: 60%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            text-align: center;
+
+            h1 {
+                font-family: AbrilFatface-regular;
+                font-size: 4rem;
+            }
+
+            .btn-banner {
+                margin: 0 auto;
+                width: 30%;
+
+            }
+
+        }
+
+        @media(max-width:705px) {
+
+            .btn-banner {
+
+                width: 100% !important;
+
+            }
+
+            #img-float {
+                display: none;
+            }
+        }
+
+        #img-float {
+            margin-top: 40%;
+            justify-content: space-evenly;
+
+            img {
+                width: 70%;
+            }
+        }
+
+        @media(max-width:990px) {
+            #img-float {
+                margin-top: 80%;
+                justify-content: space-evenly;
+            }
+        }
+
+        @media(max-width:600px) {
+            #img-float {
+                margin-top: 0;
+            }
+        }
+
+    }
+
+    #second-section {
+        margin-top: 280px;
+    }
+
+    @media(max-width:990px) {
+        #second-section {
+            margin-top: 80px;
+        }
+    }
+
+    #section-img {
+
+        .container-img {
+            img {
+                width: 70% !important;
+            }
+        }
+    }
+
+    @media(max-width:600px) {
+        .reverse {
+            flex-direction: column-reverse !important;
+
+            .title-section {
+                text-align: center;
+
+            }
+        }
+    }
+
+    #third-section {
+        img {
+            width: 70%;
+        }
+    }
+@media(max-width:500px){
+    
+    .title-section{
+        text-align: center!important;
+    }
+    .text-end{
+        text-align: center!important;
+    }
+    header {
+        .menu-bar-pc {
+            display: none;
+        }
+
+        .menu-bar-movil {
+            display: flex;
+        }
+    }
+}
+
+    #fourth-section {
+        .bg-gradient {
+            background: linear-gradient(30deg, #ff00b7, #ffa9f5) !important;
+            border-radius: 25px;
+            color: $color-blanco;
+
+            .btn-white {
+                background: #fff;
+                width: 250px;
+                margin: 0 auto;
+                border-radius: 25px;
+            }
+        }
+    }
+
+    @media (max-width:700px) {
+        #cards {
+            .card {
+                justify-content: center;
+                text-align: center !important;
+            }
+        }
+    }
+
+}
