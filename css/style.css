@@ -158,7 +158,7 @@ main .portada {
 
 main .portada .text-banner {
   left: 50%;
-  top: 60%;
+  top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   position: absolute;
